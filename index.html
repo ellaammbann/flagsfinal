@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flags</title>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 24px;
+    }
+
+    /* Every flag shares the same fixed size */
+    .flag {
+      width: 300px;
+      height: 200px;
+      outline: 1px solid #ccc;
+    }
+
+    /* Belgium: three vertical stripes */
+    .belgium { display: flex; }
+    .belgium div { flex: 1; }
+    .belgium .black  { background: #000000; }
+    .belgium .yellow { background: #FAE042; }
+    .belgium .red    { background: #ED2939; }
+
+    /* Japan: red disc with diameter 3/5 of the height */
+    .japan {
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .japan .disc {
+      height: 60%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #BC002D;
+    }
+
+    /* Trinidad and Tobago: red field with a white-edged black diagonal band */
+    .trinidad {
+      background: linear-gradient(
+        to top right,
+        #CE1126 0%,   #CE1126 40%,
+        #FFFFFF 40%,  #FFFFFF 44%,
+        #000000 44%,  #000000 56%,
+        #FFFFFF 56%,  #FFFFFF 60%,
+        #CE1126 60%,  #CE1126 100%
+      );
+    }
+  </style>
+</head>
+<body>
+  <div class="flag belgium">
+    <div class="black"></div>
+    <div class="yellow"></div>
+    <div class="red"></div>
+  </div>
+
+  <div class="flag japan">
+    <div class="disc"></div>
+  </div>
+
+  <div class="flag trinidad"></div>
+</body>
+</html>
